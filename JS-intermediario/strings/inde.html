@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strings </title>
+</head>
+<body>
+
+    <h1>O que podemos fazer com strings ?</h1>
+    <br>
+    <ul>
+        <li>concatenar uma string com outra através de variáveis</li>
+        <img src="img/ex-concatenação.png" alt="concatenando uma string com outra">
+        <li>Transformar string em número </li>
+        <img src="img/transfor-stringfornumero.png" alt="">
+    </ul>
+    <script>
+        var nome = 'Davi'
+        nome += ' Camacho'
+        nome += ' Pereira'
+         
+        var primeiro_nome = 'Victor '
+
+        console.log(primeiro_nome += nome)
+
+
+        var a = '3' 
+        var b = '5' 
+        
+        var c = parseInt(a) + parseInt(b) 
+        // para valores inteiros use o 'parseInt()'
+
+        console.log(c)
+
+        d = '9.5'
+
+        c += parseFloat(d)
+        // para valores não inteiros use o 'parseFloat()'
+        console.log(c)
+
+        var numero = parseInt(prompt("Digite um numero ?"))
+
+        var dobro = numero * 2 
+
+        alert(`O dobro de ${numero} é ${dobro}`)
+        //lembrando que sempre que pegamos um input do usuário 
+        //esse dado vem como string e caso fomos utilizar como numero devemos
+        // transformar em numero.
+    </script>
+</body>
+</html>
