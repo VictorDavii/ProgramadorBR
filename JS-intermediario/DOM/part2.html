@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+       
+    </style>
+</head>
+    <script>
+        function load() {
+            
+            let t = document.getElementById('titulo')
+        
+            t.onclick = mudarText;
+        }
+        function mudarText(){
+                this.innerHTML = 'Novo Texto'
+            }
+
+    </script>
+<body onload="load()">
+    <h1 id="titulo">teste</h1>
+</body>
+
+
+</html>

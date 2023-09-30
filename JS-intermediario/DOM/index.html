@@ -4,18 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        button{
+            padding: 1rem 2rem;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Vamos usar o DOM para criar interações com o usuário</h1>
-    <input type="text" name="text" id="text" oninput="showInputValue(this)">
-    <script>
-    
-        function showInputValue(inputElement){
-           let h1Element = document.getElementsByTagName('h1')[0]
-           h1Element.innerText = inputElement.value
+    <img src="https://img.freepik.com/vetores-gratis/jogo-joystick-tecnologia-esportiva_138676-2045.jpg?w=2000" alt="control">
 
-        }
-    
-    </script>
+    <button id="button">Passe o Mouse</button>
 </body>
+
+<script>
+    function trocaCor(){ 
+        this.style.backgroundColor = 'red'
+    }
+
+    let button = document.getElementById('button')
+    button.addEventListener('mouseover', trocaCor)
+
+
+</script>
+
 </html>
