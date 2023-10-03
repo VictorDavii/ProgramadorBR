@@ -8,21 +8,22 @@
        
     </style>
 </head>
-    <script>
-        function load() {
-            
-            let t = document.getElementById('titulo')
-        
-            t.onclick = mudarText;
-        }
-        function mudarText(){
-                this.innerHTML = 'Novo Texto'
-            }
-
-    </script>
-<body onload="load()">
-    <h1 id="titulo">teste</h1>
+<body>
+    <h1 id="t1">Esse é o titulo 1</h1>
+    <h1 id="t2">Esse é o titulo 2</h1>
 </body>
+    <script>
+        let t1 = document.querySelector('h1#t1')
+        let t2 = document.querySelector('h1#t2')
+
+        t1.onclick = upperText
+        t2.onclick = upperText
+        function upperText() {
+            
+            this.innerHTML = this.innerHTML.toUpperCase()
+        }
+                
+    </script>
 
 
 </html>
