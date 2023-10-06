@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pai e Filhos</title>
+    <style>
+        li{
+            margin: 2rem;
+            
+        }
+        li:hover{
+            cursor: pointer;
+            color: chocolate;
+        }
+        span{
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="bloco1">
+        <h1>Titulo 1</h1>
+        <h2>Clique na palavra que te define mais...</h2>
+        <ul id="palavras">
+            <li>Resiliencia</li>
+            <li>Determinação</li>
+            <li>Persistência</li>
+            <li>Inteligência</li>
+        </ul>
+        <div class="texto">
+            <p>Mude a palavra em destaque</p>
+            <p>Você se destaca em <span id="destaque">Resistência</span></p>
+        </div>
+    </div>
+
+
+    <script>
+
+        window.onload = function() {
+           
+            let palavras = document.getElementsByTagName('li')
+
+            for(let palavra of palavras){
+                palavra.addEventListener('click' , destaque)
+            }
+
+        }
+
+        function destaque(e){
+
+           conteudoPalavra = e.target.textContent
+
+           texto = document.getElementsByClassName('texto')[0]
+
+           localDestaque = texto.children[1].children[0]
+
+           localDestaque.innerText = conteudoPalavra
+
+        }
+    </script>
+</body>
+</html>
